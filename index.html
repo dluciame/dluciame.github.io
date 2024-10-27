@@ -116,8 +116,10 @@
       dynamicTextElement.textContent = currentWord;
 
       if (!isDeleting && charIndex === words[index].length) {
-        isDeleting = true;
-        setTimeout(typeEffect, 2000); // Pausa antes de borrar
+        setTimeout(() => {
+          isDeleting = true;
+          typeEffect();
+        }, 2000); // Pausa antes de borrar
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         index = (index + 1) % words.length;
@@ -130,6 +132,11 @@
     document.addEventListener('DOMContentLoaded', (event) => {
       typeEffect();
     });
+  </script>
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+  typeEffect();
+  });
   </script>
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
