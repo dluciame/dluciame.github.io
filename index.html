@@ -64,11 +64,9 @@
 
         <h3>Cloud & DevOps Engineer | Kubernetes | CI/CD | Platform Engineer | All as CODE | Problem Solver | Team
           player | Deploy first 🚀| AI for work</h3>
-        <div class="typing-container">
-          <span id="sentence" class="sentence">Here, take this </span>
-          <span id="feature-text"></span>
-          <span class="input-cursor"></span>
-        </div>
+
+        <span id="element"></span>
+
         <p>I am a passionate DevOps Engineer with a strong focus on container management and orchestration, primarily
           with Kubernetes. I have extensive experience in implementing Continuous Integration and Continuous Deployment
           (CI/CD) pipelines, especially using GitHub Actions. I specialize in deploying infrastructure on Azure, using
@@ -101,38 +99,14 @@
       </div>
     </div>
   </div>
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
   <script>
-    const words = ["Cloud Engineer", "DevOps Engineer", "Kubernetes Expert", "CI/CD Specialist", "Platform Engineer"];
-    let index = 0;
-    let charIndex = 0;
-    let currentWord = '';
-    let isDeleting = false;
-
-    function typeEffect() {
-      const dynamicTextElement = document.getElementById('dynamic-text');
-
-      if (isDeleting) {
-        currentWord = words[index].substring(0, charIndex--);
-      } else {
-        currentWord = words[index].substring(0, charIndex++);
-      }
-
-      dynamicTextElement.textContent = currentWord;
-
-      if (!isDeleting && charIndex === words[index].length) {
-        isDeleting = true;
-        setTimeout(typeEffect, 2000); // Pausa antes de borrar
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        index = (index + 1) % words.length;
-        setTimeout(typeEffect, 500); // Pausa antes de escribir la siguiente palabra
-      } else {
-        setTimeout(typeEffect, isDeleting ? 50 : 100); // Velocidad de escritura y borrado
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', (event) => {
-      typeEffect();
+    var typed = new Typed('#element', {
+      strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+      typeSpeed: 50,
     });
   </script>
   <!-- End Document
