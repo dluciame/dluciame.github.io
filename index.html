@@ -64,15 +64,15 @@
 
         <h3>Cloud & DevOps Engineer | Kubernetes | CI/CD | Platform Engineer | All as CODE | Problem Solver | Team
           player | Deploy first 🚀| AI for work</h3>
+        <p>I am a <span id="dynamic-text">Cloud Engineer</span></p>
         <p>I am a passionate DevOps Engineer with a strong focus on container management and orchestration, primarily
           with Kubernetes. I have extensive experience in implementing Continuous Integration and Continuous Deployment
           (CI/CD) pipelines, especially using GitHub Actions. I specialize in deploying infrastructure on Azure, using
           Terraform as my Infrastructure as Code (IaC) tool, always following best practices to ensure efficient and
           secure deployments.
         </p>
-        <!-- Short Bio -->
-        <p>An open source DIY Linktree alternative.</p>
 
+        <!-- Badges -->
         <img
           src="https://images.credly.com/size/340x340/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png"
           alt=""
@@ -94,18 +94,20 @@
           style="cursor: pointer; width: 150px; height: 150px;"><br>
 
         <br>
-        <!-- 
-            Footer:
-            This includes a link to privacy.html page which can be setup for your Privacy Policy.
-            This also includes a link to the LittleLink repository to make forking LittleLink easier.
-            You can edit or remove anything here to make your own footer.
-        -->
-        <p><a href="privacy.html">Privacy Policy</a> | Build your own by forking <a href="https://littlelink.io"
-            target="_blank" rel="noopener" role="button">LittleLink</a>.</p>
-
       </div>
     </div>
   </div>
+  <script>
+    const words = ["Cloud Engineer", "DevOps Engineer", "Kubernetes Expert", "CI/CD Specialist", "Platform Engineer"];
+    let index = 0;
+
+    function changeText() {
+      document.getElementById('dynamic-text').textContent = words[index];
+      index = (index + 1) % words.length;
+    }
+
+    setInterval(changeText, 2000); // Cambia el texto cada 2 segundos
+  </script>
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
