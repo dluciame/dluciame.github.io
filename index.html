@@ -64,7 +64,11 @@
 
         <h3>Cloud & DevOps Engineer | Kubernetes | CI/CD | Platform Engineer | All as CODE | Problem Solver | Team
           player | Deploy first 🚀| AI for work</h3>
-        <p>I am a <span id="dynamic-text">Cloud Engineer</span></p>
+        <div class="typing-container">
+          <span id="sentence" class="sentence">Here, take this </span>
+          <span id="feature-text"></span>
+          <span class="input-cursor"></span>
+        </div>
         <p>I am a passionate DevOps Engineer with a strong focus on container management and orchestration, primarily
           with Kubernetes. I have extensive experience in implementing Continuous Integration and Continuous Deployment
           (CI/CD) pipelines, especially using GitHub Actions. I specialize in deploying infrastructure on Azure, using
@@ -116,10 +120,8 @@
       dynamicTextElement.textContent = currentWord;
 
       if (!isDeleting && charIndex === words[index].length) {
-        setTimeout(() => {
-          isDeleting = true;
-          typeEffect();
-        }, 2000); // Pausa antes de borrar
+        isDeleting = true;
+        setTimeout(typeEffect, 2000); // Pausa antes de borrar
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         index = (index + 1) % words.length;
@@ -132,11 +134,6 @@
     document.addEventListener('DOMContentLoaded', (event) => {
       typeEffect();
     });
-  </script>
-
-  document.addEventListener('DOMContentLoaded', (event) => {
-  typeEffect();
-  });
   </script>
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
