@@ -107,6 +107,10 @@ body {
 }
 
 
+span {
+  color: #4899F7;
+}
+
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1 {
@@ -226,9 +230,7 @@ hr {
   border-radius: 50%;
 }
 
-span {
-  color: #4899F7;
-}
+
 
 
 /* open-sans-regular - vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic */
